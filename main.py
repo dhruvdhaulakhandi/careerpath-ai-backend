@@ -18,6 +18,7 @@ app.add_middleware(
 )
 
 UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
